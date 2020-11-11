@@ -2,7 +2,7 @@ FROM node:14.15.0-alpine
 WORKDIR '/app'
 COPY package.json .
 RUN npm cache verify
-RUN npm install -g create-react-app
+RUN npm install
 COPY . .
 RUN npm run build
 
